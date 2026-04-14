@@ -25,6 +25,29 @@ body {
     
 }
 
+/* ছবির প্রাথমিক স্টাইল */
+#profilePic {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* আপনার প্রয়োজনমতো সাইজ দিন */
+    border-radius: 50%;
+}
+
+/* যখন ছবি বড় হবে (Zoomed state) */
+.zoomed {
+    transform: scale(2.5); /* কতগুণ বড় হবে */
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    
+}
+
+/* ব্যাকগ্রাউন্ড আবছা করার জন্য অপশনাল ইফেক্ট */
+.overlay-active {
+    filter: blur(4px) brightness(70%);
+    pointer-events: none;
+}
+
 .card {
     background: white;
     padding: 30px;

@@ -82,3 +82,22 @@ function reset() {
 document.getElementById('guessInput').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') play();
 });
+// profil zoom animation 
+const profilePic = document.getElementById('profilePic');
+const card = document.querySelector('.card');
+
+profilePic.addEventListener('click', function() {
+    // ছবি বড় বা ছোট করা টগল করবে
+    this.classList.toggle('zoomed');
+    
+    // কার্ড বা পিছনের অংশকে কিছুটা আবছা করা (ঐচ্ছিক)
+    card.classList.toggle('overlay-active');
+});
+
+// ছবির বাইরে ক্লিক করলে যেন আবার ছোট হয়ে যায়
+document.addEventListener('click', function(e) {
+    if (e.target !== profilePic && profilePic.classList.contains('zoomed')) {
+        profilePic.classList.remove('zoomed');
+        card.classList.remove('overlay-active');
+    }
+});
