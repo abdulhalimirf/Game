@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Number Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <img id="profilePic" src="/Image/Abdul_Halim.jpg" alt="abdul-halim" />
+    </div>
+    <div class="card">
+        <h1>গেস মাস্টার 🎯</h1>
+        <p id="rangeText">১ থেকে ১০০ এর মধ্যে সংখ্যাটি খুঁজুন</p>
+        
+        <div class="difficulty-btns">
+            <button class="diff-btn" onclick="setDiff(50, this)">সহজ</button>
+            <button class="diff-btn active" onclick="setDiff(100, this)">মাঝারি</button>
+            <button class="diff-btn" onclick="setDiff(200, this)">কঠিন</button>
+        </div>
+        
+        <div class="input-group">
+            <input type="number" id="guessInput" placeholder="?">
+        </div>
+        
+        <button class="main-btn" id="checkBtn" onclick="play()">চেক করুন</button>
+        <button class="main-btn" id="resetBtn" onclick="reset()">আবার খেলুন 🔄</button>
+        
+        <div id="msg"></div>
+        
+        <div class="stats-grid">
+            <div class="stat-box">চেষ্টা 🏃‍♂️<span id="attempts">০</span></div>
+            <div class="stat-box">সেরা রেকর্ড 🏆<span id="highScore">--</span></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
