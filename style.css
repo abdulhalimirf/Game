@@ -15,14 +15,15 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-#profilePic{
+
+#profilePic {
     width: 80px;
     height: 80px;
     border-radius: 50px;
-    margin: 20px ;
+    margin: 20px;
     display: block;
-    margin-left: 165px;
-    
+    margin-left: 175px;
+    margin-top: 50px;
 }
 
 /* ছবির প্রাথমিক স্টাইল */
@@ -35,10 +36,11 @@ body {
 
 /* যখন ছবি বড় হবে (Zoomed state) */
 .zoomed {
-    transform: scale(2.5); /* কতগুণ বড় হবে */
+    transform: scale(2.5);
+    /* কতগুণ বড় হবে */
     position: relative;
     z-index: 1000;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     
 }
 
@@ -52,7 +54,7 @@ body {
     background: white;
     padding: 30px;
     border-radius: 24px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 390px;
     text-align: center;
@@ -110,7 +112,7 @@ input:focus {
 }
 
 @keyframes shake {
-
+    
     0%,
     100% {
         transform: translateX(0);
